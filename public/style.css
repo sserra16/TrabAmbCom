@@ -1,0 +1,104 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all ease-in-out .4s;
+}
+
+main section#backgrounds img#background {
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    width: 130%;
+    height: 140%;
+    filter: blur(50px) brightness(.8);
+    transition: all ease-in-out .4s;
+}
+
+main section#imgs {
+    width: 70rem;
+    height: 32rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out .4s;
+}
+
+main section#imgs img {
+    display: none;
+    transition: all ease-in-out .4s;
+}
+
+main section#imgs img.selected {
+    display: block;
+    width: 36rem;
+    height: 20rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all ease-in-out .4s;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.45));
+}
+
+main section#imgs img.selected:hover {
+    width: 38rem;
+    height: 21rem;
+}
+
+main div.words {
+    display: none;
+}
+
+main div.words.visible {
+    display: block;
+}
+
+main h1{
+    color: white;
+    position: absolute;
+    top: 21rem;
+    left: 20.8rem;
+    font-size: 3rem;
+    border-bottom: solid .2rem white;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+main p{
+    color: white;
+    position: absolute;
+    top: 30rem;
+    left: 20.8rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+main i {
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+main i#right:hover{
+    transform: translateX(1rem);
+}
+
+main i#left:hover {
+    transform: translateX(-1rem)
+}
+
+main i#right{
+    color: aliceblue;
+    position: absolute;
+    right: 10rem;
+    bottom: 38%;
+    font-size: 3rem;
+} 
+
+main i#left{
+    color: aliceblue;
+    position: absolute;
+    left: 10rem;
+    bottom: 38%;
+    font-size: 3rem;
+}

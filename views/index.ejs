@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5c29d615b.js" crossorigin="anonymous"></script>
+    <title>Trabalho AmbCom</title>
+</head>
+
+<body>
+    <main>
+        <section id="backgrounds">
+            <img id="background" src="/assets/memoria.jpg" alt="">
+        </section>
+
+
+        <section id="imgs">
+            <a href="/details">
+                <img class="selected" src="/assets/memoria.jpg" alt="">
+                <img src="/assets/placamae.jpg" alt="">
+                <img src="/assets/processador.png" alt="">
+            </a>
+        </section>
+
+
+        <div class="words visible">
+            <h1 class="title">Memória RAM <br> - 8gb</h1>
+            <p class="text">Alta perfomance e velocidade</p>
+        </div>
+
+        <div class="words">
+            <h1 class="title">Placa Mãe</h1>
+            <p class="text">Perfeita para seu desktop</p>
+        </div>
+
+        <div class="words">
+            <h1 class="title">Processador intel i9</h1>
+            <p class="text">Alta velocidade de leitura de dados</p>
+        </div>
+
+        <i id="right" class="fa-solid fa-arrow-right" onclick='nextImage()'></i>
+        <i id="left" class="fa-solid fa-arrow-left" onclick="backImage()"></i>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
