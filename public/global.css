@@ -12,3 +12,13 @@ body {
     overflow: hidden;
     transition: ease-in-out .3s;
 }
+
+section#backgrounds img#background {
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    width: 130%;
+    height: 140%;
+    filter: blur(50px) brightness(.8);
+    transition: opacity .4s;
+}
