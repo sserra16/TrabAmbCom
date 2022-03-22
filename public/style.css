@@ -3,7 +3,6 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: all ease-in-out .4s;
 }
 
 main section#backgrounds img#background {
@@ -13,7 +12,7 @@ main section#backgrounds img#background {
     width: 130%;
     height: 140%;
     filter: blur(50px) brightness(.8);
-    transition: all ease-in-out .4s;
+    transition: opacity .4s;
 }
 
 main section#imgs {
@@ -23,16 +22,21 @@ main section#imgs {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all ease-in-out .4s;
 }
 
 main section#imgs img {
+    position: fixed;
     opacity: 0;
-    transition: all ease-in-out .4s;
+    top: 1000rem;
+    transition: opacity .4s;
+    width: 36rem;
+    height: 20rem;
+    border-radius: 2rem;
 }
 
 main section#imgs img.selected {
     opacity: 1;
+    position: initial;
     width: 36rem;
     height: 20rem;
     border-radius: 2rem;
@@ -68,7 +72,7 @@ main h1{
 main p{
     color: white;
     position: absolute;
-    top: 30rem;
+    top: 27rem;
     left: 20.8rem;
     font-size: 1.3rem;
     font-weight: bold;
