@@ -1,10 +1,17 @@
 const images = document.querySelectorAll("main section#imgs img");
 const words = document.querySelectorAll("div.words");
 
+const selected = document.querySelector(".selected");
+
 const background = document.getElementById("background");
 
 let max = images.length;
 let index = 0;
+
+function Details() {
+    selected.classList.remove("selected")
+    selected.classList.add("details")
+}
 
 function nextImage() {
     images[index].classList.remove("selected");
