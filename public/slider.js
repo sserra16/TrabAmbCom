@@ -1,30 +1,14 @@
 const images = document.querySelectorAll("main section#imgs img");
 const words = document.querySelectorAll("div.words");
-
-const selected = document.querySelector(".selected");
-
-const arrowRight = document.getElementById("right");
-const arrowLeft = document.getElementById("left");
-const arrowTop = document.getElementById("top");
-
 const background = document.getElementById("background");
 
 let max = images.length;
 let index = 0;
 
-function Details() {
-    selected.classList.remove("selected")
-    selected.classList.add("details")
-
-    arrowRight.style.opacity = 0;
-    arrowLeft.style.opacity = 0;
-    arrowTop.style.opacity = 1;
-}
-
 function nextImage() {
     images[index].classList.remove("selected");
 
-    words[index].classList.remove("visible")
+    removeText(index);
 
     index++
 
@@ -36,15 +20,15 @@ function nextImage() {
 
     streetImg = images[index].getAttribute("src");
 
-    background.setAttribute("src", streetImg);
-
-    words[index].classList.add("visible");
+    addText(index);
+    setBackground(streetImg);
 }
+
 
 function backImage() {
     images[index].classList.remove("selected");
 
-    words[index].classList.remove("visible");
+    removeText(index);
 
     index--
 
@@ -56,7 +40,22 @@ function backImage() {
     
     streetImg = images[index].getAttribute("src");
 
-    words[index].classList.add("visible");
+    setBackground(streetImg);
+    addText(index);
+}
 
-    background.setAttribute("src", streetImg);
+
+function removeText(i) {
+    words[i].classList.remove("visible");
+    words[i].setAttribute("id", "");
+
+}
+
+function addText(i) {
+    words[i].classList.add("visible");
+    words[i].setAttribute("id", "text")
+}
+
+function setBackground(street) {
+    background.setAttribute("src", street);
 }

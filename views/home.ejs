@@ -18,13 +18,13 @@
     <main>
         <%- include("partials/imgs") %>
 
-        <section id="imgs">
-                <img class="selected" onclick="Details()" src="/assets/memoria.jpg" alt="">
+        <section id="imgs" onclick="Details('.selected')">
+                <img class="selected" src="/assets/memoria.jpg" alt="">
                 <img src="/assets/placamae.jpg" alt="">
                 <img src="/assets/processador.webp" alt="">
         </section>
 
-        <div class="words visible">
+        <div id="text" class="words visible">
             <h1 class="title">Memória RAM</h1>
             <p class="text">Alta perfomance e velocidade</p>
         </div>
@@ -39,15 +39,14 @@
             <p class="text">Alta velocidade de leitura de dados</p>
         </div>
 
-        <a href="/">
-            <i id="top" class="fa-solid fa-arrow-left"></i>
-        </a>
+            <i id="top" class="fa-solid fa-arrow-left" onclick="backDetails('.details')"></i>
 
         <i id="right" class="fa-solid fa-arrow-right" onclick='nextImage()'></i>
         <i id="left" class="fa-solid fa-arrow-left" onclick="backImage()"></i>
     </main>
 
-    <script src="home.js"></script>
+    <script src="details.js"></script>
+    <script src="slider.js"></script>
 </body>
 
 </html>
