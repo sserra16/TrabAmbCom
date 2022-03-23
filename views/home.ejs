@@ -18,7 +18,7 @@
     <main>
         <%- include("partials/imgs") %>
 
-        <section id="imgs" onclick="Details('.selected')">
+        <section id="imgs" onclick="Details.showDetails('.selected')">
                 <img class="selected" src="/assets/memoria.jpg" alt="">
                 <img src="/assets/placamae.jpg" alt="">
                 <img src="/assets/processador.webp" alt="">
@@ -39,14 +39,13 @@
             <p class="text">Alta velocidade de leitura de dados</p>
         </div>
 
-            <i id="top" class="fa-solid fa-arrow-left" onclick="backDetails('.details')"></i>
+            <i id="top" class="fa-solid fa-arrow-left" onclick="Details.backDetails('.details')"></i>
 
-        <i id="right" class="fa-solid fa-arrow-right" onclick='nextImage()'></i>
-        <i id="left" class="fa-solid fa-arrow-left" onclick="backImage()"></i>
+        <i id="right" class="fa-solid fa-arrow-right" onclick='Slide.nextImage()'></i>
+        <i id="left" class="fa-solid fa-arrow-left" onclick="Slide.backImage()"></i>
     </main>
 
-    <script src="details.js"></script>
-    <script src="slider.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
