@@ -3,6 +3,10 @@ const words = document.querySelectorAll("div.words");
 
 const selected = document.querySelector(".selected");
 
+const arrowRight = document.getElementById("right");
+const arrowLeft = document.getElementById("left");
+const arrowTop = document.getElementById("top");
+
 const background = document.getElementById("background");
 
 let max = images.length;
@@ -11,6 +15,10 @@ let index = 0;
 function Details() {
     selected.classList.remove("selected")
     selected.classList.add("details")
+
+    arrowRight.style.opacity = 0;
+    arrowLeft.style.opacity = 0;
+    arrowTop.style.opacity = 1;
 }
 
 function nextImage() {

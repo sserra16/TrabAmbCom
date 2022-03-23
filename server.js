@@ -9,8 +9,4 @@ app.get("/", (req, res) => {
     res.render("home")
 });
 
-app.get("/details", (req, res) => {
-    res.render("details")
-});
-
 app.listen(3000, () => console.log("O server está rodando"));
