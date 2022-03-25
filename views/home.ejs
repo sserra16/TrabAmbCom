@@ -18,31 +18,34 @@
     <main>
         <%- include("partials/imgs") %>
 
-        <section id="imgs" onclick="Details.showDetails('.selected')">
-                <img class="selected" src="/assets/memoria.jpg" alt="">
-                <img src="/assets/placamae.jpg" alt="">
-                <img src="/assets/processador.webp" alt="">
-        </section>
+            <div class="container">
 
-        <div id="text" class="words visible">
-            <h1 class="title">Memória RAM</h1>
-            <p class="text">Alta perfomance e velocidade</p>
-        </div>
+                <section id="imgs" onclick="Details.showDetails('.selected')">
+                    <img class="selected" src="/assets/memoria.jpg" alt="">
+                    <img src="/assets/placamae.jpg" alt="">
+                    <img src="/assets/processador.webp" alt="">
+                </section>
 
-        <div class="words">
-            <h1 class="title">Placa Mãe</h1>
-            <p class="text">Perfeita para seu desktop</p>
-        </div>
+                <div id="text" class="words visible">
+                    <h1 class="title">Memória RAM</h1>
+                    <p class="text">Alta perfomance e velocidade</p>
+                </div>
 
-        <div class="words">
-            <h1 class="title">Processador intel i9</h1>
-            <p class="text">Alta velocidade de leitura de dados</p>
-        </div>
+                <div class="words">
+                    <h1 class="title">Placa Mãe</h1>
+                    <p class="text">Perfeita para seu desktop</p>
+                </div>
+
+                <div class="words">
+                    <h1 class="title">Processador intel i9</h1>
+                    <p class="text">Alta velocidade de leitura de dados</p>
+                </div>
+            </div>
 
             <i id="top" class="fa-solid fa-arrow-left" onclick="Details.backDetails('.details')"></i>
 
-        <i id="right" class="fa-solid fa-arrow-right" onclick='Slide.nextImage()'></i>
-        <i id="left" class="fa-solid fa-arrow-left" onclick="Slide.backImage()"></i>
+            <i id="right" class="fa-solid fa-arrow-right" onclick='Slide.nextImage()'></i>
+            <i id="left" class="fa-solid fa-arrow-left" onclick="Slide.backImage()"></i>
     </main>
 
     <script src="index.js"></script>
