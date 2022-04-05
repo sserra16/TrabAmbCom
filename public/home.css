@@ -61,20 +61,23 @@ main section#imgs img.details {
 main section#imgs img.selected:hover {
     width: 38rem;
     height: 21rem;
+    margin-bottom: 1.4rem;
 }
 
 main div.words {
     opacity: 0;
-    transition-delay: 1s;
     position: absolute;
-    transition: opacity .4s;
-    float: inline-end;
+    transition: opacity 1s;
 }
 
 main div.words.visible {
     opacity: 1;
-    transition-delay: 1s;
-    transition: opacity .4s;
+    transition: opacity 1s;
+}
+
+main div#words-details.visible {
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 main h1{
