@@ -67,17 +67,12 @@ main section#imgs img.selected:hover {
 main div.words {
     opacity: 0;
     position: absolute;
-    transition: opacity 1s;
+    transition: opacity .5s;
 }
 
 main div.words.visible {
     opacity: 1;
-    transition: opacity 1s;
-}
-
-main div#words-details.visible {
-    opacity: 1;
-    transition: opacity 1s;
+    transition: opacity .5s;
 }
 
 main h1{
