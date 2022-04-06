@@ -21,7 +21,7 @@
 
             <div class="container">
 
-                <section id="imgs" onclick="Details.showDetails('.selected')">
+                <section id="imgs" onclick="Details.showDetails('.selected'); Details.showText('text-details')">
                     <img class="selected" src="/assets/memoria.jpg" alt="">
                     <img src="/assets/placamae.jpg" alt="">
                     <img src="/assets/processador.webp" alt="">
@@ -47,6 +47,8 @@
 
             <i id="right" class="fa-solid fa-arrow-right" onclick='Slide.nextImage()'></i>
             <i id="left" class="fa-solid fa-arrow-left" onclick="Slide.backImage()"></i>
+
+            <%- include('partials/text-details') %>
     </main>
 
     <script src="index.js"></script>

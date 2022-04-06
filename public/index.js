@@ -68,47 +68,50 @@ const Slide = {
 }
 
 //Objeto para guardar todas as funções dos detalhes
+
+/* -----CORRIGIR ERRO DAS SETAS ----- */
 const Details = {
 
     showDetails(idSelected) {
         const selec = document.querySelector(idSelected);
-    
+
         selec.classList.remove("selected");
         selec.classList.add("details");
-    
+
         document.getElementById("text").classList.remove("visible");
-    
+
         Details.hideArrows();
-    
+
         //Desabilitando as setas laterais e habilitando a top
         arrowRight.setAttribute("onclick", "");
         arrowRight.style.cursor = "default";
-    
+
         arrowLeft.setAttribute("onclick", "");
         arrowLeft.style.cursor = "default";
-    
+
         arrowTop.setAttribute("onclick", "Details.backDetails('.details')");
         arrowTop.style.cursor = "pointer";
     },
 
     backDetails(idDetails) {
         const detail = document.querySelector(idDetails);
-    
+
         detail.classList.add("selected");
         detail.classList.remove("details");
-    
+
         Details.showArrows();
-    
+
         document.getElementById("text").classList.add("visible");
-    
+
         //Habilitando as setas laterais e desabilitando a top
         arrowRight.setAttribute("onclick", "Slide.nextImage()");
         arrowRight.style.cursor = "pointer";
-    
+
         arrowLeft.setAttribute("onclick", "Slide.backImage()");
         arrowLeft.style.cursor = "pointer";
-    
+
         arrowTop.setAttribute("onclick", "");
+        Details.hiddenText('text-details');
         arrowTop.style.cursor = "default";
     },
 
@@ -122,5 +125,14 @@ const Details = {
         arrowRight.style.opacity = 1;
         arrowLeft.style.opacity = 1;
         arrowTop.style.opacity = 0;
+    },
+
+    showText(idText) {
+        document.getElementById(idText).style.opacity = 1;
+    },
+
+    hiddenText(idText) {
+        console.log("ta funcionando")
+        document.getElementById(idText).style.opacity = 0;
     }
 }
