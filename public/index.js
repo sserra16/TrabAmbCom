@@ -71,6 +71,7 @@ const Slide = {
 
 /* -----CORRIGIR ERRO DAS SETAS ----- */
 const Details = {
+    text_details: document.querySelectorAll(".text-details"), 
 
     showDetails(idSelected) {
         const selec = document.querySelector(idSelected);
@@ -111,7 +112,7 @@ const Details = {
         arrowLeft.style.cursor = "pointer";
 
         arrowTop.setAttribute("onclick", "");
-        Details.hiddenText('text-details');
+        Details.hiddenText();
         arrowTop.style.cursor = "default";
     },
 
@@ -127,12 +128,11 @@ const Details = {
         arrowTop.style.opacity = 0;
     },
 
-    showText(idText) {
-        document.getElementById(idText).style.opacity = 1;
+    showText() {
+        this.text_details[index].classList.add("visible");
     },
 
     hiddenText(idText) {
-        console.log("ta funcionando")
-        document.getElementById(idText).style.opacity = 0;
+        this.text_details[index].classList.remove("visible");
     }
 }

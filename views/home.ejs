@@ -21,7 +21,7 @@
 
             <div class="container">
 
-                <section id="imgs" onclick="Details.showDetails('.selected'); Details.showText('text-details')">
+                <section id="imgs" onclick="Details.showDetails('.selected'); Details.showText()">
                     <img class="selected" src="/assets/memoria.jpg" alt="">
                     <img src="/assets/placamae.jpg" alt="">
                     <img src="/assets/processador.webp" alt="">
@@ -48,7 +48,28 @@
             <i id="right" class="fa-solid fa-arrow-right" onclick='Slide.nextImage()'></i>
             <i id="left" class="fa-solid fa-arrow-left" onclick="Slide.backImage()"></i>
 
-            <%- include('partials/text-details') %>
+            <div class="text-details words">
+                <p>
+                    Se você percebe que seu computador está com baixo desempenho ou que sua capacidade não atende às
+                    suas necessidades de uso, é hora de renovar sua RAM. Você aumentará sua produtividade e trabalhará
+                    de forma rápida e simultânea com vários aplicativos.
+                </p>
+            </div>
+            <div class="text-details words">
+                <p>
+                    As séries GIGABYTE 400 maximizam o potencial do seu PC com a tecnologia AMD StoreMI. O StoreMI
+                    acelera os dispositivos de armazenamento tradicionais para reduzir os tempos de inicialização e
+                    melhorar a experiência geral do usuário.
+                </p>
+            </div>
+            <div class="text-details words">
+                <p>
+                    Processador Intel Core i7-9700KF
+                    Os novos processadores Intel Core da 9ª Geração oferecem atualizações de desempenho incríveis para
+                    melhorar a produtividade e proporcionar entretenimento surpreendente, otimização de sistema
+                    inteligentes e muito mais.
+                </p>
+            </div>
     </main>
 
     <script src="index.js"></script>
